@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATANEXUS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">DATANEXUS</div>
+        <nav class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="gestores.html">Gestores BD</a>
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle">Laboratorios</a>
+            <div class="dropdown-menu">
+            <a href="asig.html">Asignacion #1</a>
+            <a href="lab1.html">Lab 1</a>
+            <a href="lab2.html">Lab 2</a>
+            <a href="lab3.html">Lab 3</a>
+            <a href="bd.html">5 Base de datos</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle">Tendencias BD</a>
+            <div class="dropdown-menu">
+            <a href="bdeducativa.html">Base de datos Educativa</a>
+            <a href="ciudadinteligente.html">Ciudades Inteligentes</a>
+            <a href="inteligenciartificial.html">Inteligencia Artificial</a>
+            </div>
+        </div>
+        </nav>
+        <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+    </header>
+
+    <div class="container">
+        <h1 class="text_intro" >LABORATORIO NUMERO UNO</h1>
+        <div class="intro">
+                <div class="text">
+                    <p>En este laboratorio se trabajaron consultas SQL en un sistema de servicios, aplicando comandos como DELETE para eliminar registros, UPDATE para actualizar datos, e INSERT INTO para agregar nueva información. También se usó WHERE para filtrar datos y se practicó el ordenamiento de resultados en forma ascendente y descendente. Esto permitió manipular y organizar datos de manera eficiente.
+                    </p>
+
+                    <h3>CONSULTAS</h3>
+                    <h4>Ordenamiento (ASC/DESC):</h4>
+                    <p>ASC organiza los resultados en orden ascendente (por defecto) y DESC en orden descendente.</p>
+
+                    <h4>WHERE</h4>
+                    <p>Es una cláusula que se emplea para filtrar registros basados en una condición.</p>
+
+                    <h4>INSERT INTO</h4>
+                    <p>Se utiliza para agregar nuevos registros a una tabla, especificando los valores que se insertarán.</p>
+
+                    <h4>UPDATE</h4>
+                    <p>Sirve para actualizar datos en una tabla. También se combina con WHERE para indicar qué registros deben modificarse.</p>
+
+                    <h4>DELETE</h4>
+                    <p>Permite eliminar registros de una tabla. Se usa junto con la cláusula WHERE para especificar qué registros se deben eliminar.
+                        Estas consultas son fundamentales para la manipulación y organización de datos en bases de datos relacionales.</p>
+                </div>
+
+            <div class="avatar">
+                <img class="fondo" src="imagen/lab1.gif">
+                <img class="fondo" src="imagen/labgeneral.png">
+            </div>
+        </div>
+
+        <div class="intro">
+            <div class="descripcion">
+                <h1>Tablas</h1>
+                <br>
+                <h4>Tabla Administrativos</h4>
+                <ul>
+                    <li>Campos: ID (clave primaria), nombre, apellido, departamento, teléfono y correo electrónico.</li>
+                    <li>Propósito: Almacenar los datos del personal administrativo de la institución.</li>
+                </ul>
+
+                <h4>Tabla Clases</h4>
+                <ul>
+                    <li>Campos: ID de la clase (clave primaria), nombre de la clase, código, horario, ID del profesor y del salón.</li>
+                    <li>Propósito: Describir las materias impartidas, vinculándolas con profesores y salones. </li>
+                </ul>
+
+                <h4>Tabla Estudiantes</h4>
+                <ul>
+                    <li>Campos: ID del estudiante (clave primaria), nombre, apellido, fecha de nacimiento, teléfono, correo electrónico, carrera y semestre.</li>
+                    <li>Propósito: Registrar los datos personales y académicos de los estudiantes.</li>
+                </ul>
+
+
+                <h4>Tabla Practicas</h4>
+                <ul>
+                    <li>Campos: ID de la práctica (clave primaria), nombre, descripción, fechas de inicio y fin, ID del estudiante y de la clase.</li>
+                    <li>Propósito: Documentar las actividades prácticas realizadas por los estudiantes.</li>
+                
+
+                <h4>Tabla Profesores</h4>
+                <ul>
+                    <li>Campos: ID del profesor (clave primaria), nombre, apellido, especialidad, teléfono y correo electrónico.</li>
+                    <li>Propósito: Registrar información sobre los docentes y sus áreas de especialización.</li>
+                </ul>
+            </div>
+            <div class="avatar">
+                <img class="fondo" src="imagen/labgeneral2.png">
+            </div>
+        </div>
+
+        <div class="info">
+            <div class="descripcion">
+                <h2>Tabla Salones</h2>
+                <ul>
+                    <li>Campos: ID del salón (clave primaria), nombre o código, capacidad y ubicación.</li>
+                    <p>Propósito: Identificar las aulas disponibles para la impartición de clases.</p>
+                </ul>
+                <br>
+                <h4>Esquema de Relaciones</h4>
+                <p>Se deduce que se establecieron relaciones entre las tablas:</p>
+                <br>
+                <ul>
+                    <li>Los estudiantes están relacionados con las prácticas (campo ID_Estudiante)</li>
+                    <li>Las prácticas están asociadas a clases (campo ID_Clase)</li>
+                    <li>Las clases están vinculadas a profesores y salones mediante los campos ID_Profesor y ID_Salon</li>
+                </ul>
+        
+                <h4>Proposito del laboratorio</h4>
+                <p>Aprendizaje</p>
+                <br>
+                <ul>
+                    <li>Familiarizarse con el uso de phpMyAdmin para diseñar y gestionar bases de datos relacionales.</li>
+                    <li>Diseño estructurado: Construir un sistema organizado que facilite el manejo de información de una institución educativa.</li>
+                    <li>Validación: Asegurar que cada tabla cumple con las normativas de diseño de bases de datos, como evitar redundancias y establecer claves primarias para cada entidad.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="canvas">
+            <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+            padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+            border-radius: 8px; will-change: transform;">
+            <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+                src="https://www.canva.com/design/DAGVBe_Hbwk/rlY8UYnRUjfxWIqSlDBfZA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+            </iframe>
+            </div>
+        </div>
+        <h3>PROYECTO SEMESTRAL - MELANIE PRADO & DAMIAN CASTRO</h3>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

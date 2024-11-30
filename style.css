@@ -1,0 +1,290 @@
+/* FUENTE */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    background-image: linear-gradient(to right, #ffffff, #abbabb, #ffffff);
+}
+
+.container{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* NAVEGADOR */
+.navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #abbabb;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+  /* Dropdown Menu Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown .dropdown-toggle {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0;
+    z-index: 1000;
+}
+
+.dropdown-menu a {
+    padding: 0.5rem 1rem;
+    display: block;
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+  /* Menu Toggle Button for Mobile */
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+}
+/* FONDO DE INCIIO */
+
+.intro{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.intro .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.intro .text h1{
+    font-size: 72px;
+}
+
+.intro .text a{
+    margin-right: 16px;
+    color: #000;
+}
+
+
+.intro .text p{
+    line-height: 1.5;
+    font-size: 18px;
+    text-align: justify;
+    font-weight: 400;
+    font-family: "Nunito Sans Variable", sans-serif;
+    margin-bottom: 14px;
+    padding: 14px;
+    color: #000;
+}
+
+
+.intro .avatar{
+    text-align: center;
+}
+
+.fondo{
+    width: 660px;
+    max-width: 100%;
+    height: auto;
+}
+
+.fondo_img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 560px;
+    max-width: 100%;
+    height: auto;
+    padding: 20px;
+
+}
+
+/* INFORMACION */
+
+.info{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border-bottom: 1px solid;
+    margin-bottom: 62px;
+    padding-bottom: 62px;
+    padding-top: 60px;
+}
+
+.info .descripcion{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info .screenshot img{
+    width: auto;
+    max-width: 100%;
+}
+
+/* Dropdown Menu for Mobile */
+.nav-links.active .dropdown-menu {
+    display: none;
+}
+
+.nav-links.active .dropdown:hover .dropdown-menu {
+    display: block;
+    position: relative;
+    box-shadow: none;
+}
+
+.text_intro{
+    font-size: 92px;
+    padding: 30px;
+    text-align: center;
+}
+
+.descripcion li{
+    line-height: 1.5;
+    font-size: 16px;
+    text-align: justify;
+    font-weight: 500;
+    font-family: "Nunito Sans Variable", sans-serif;
+    margin-bottom: 14px;
+    padding: 2px;
+    color: #000;
+}
+
+
+.video{
+    display: flex;
+    padding: 40px;
+}
+
+.canvas{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+/* REPONSIVE */
+
+@media (width < 1000px) {
+    .intro{
+        grid-template-columns: 100%;
+        text-align: center;
+    }
+
+    .info{
+        grid-template-columns: 100%;
+        text-align: center;
+    }
+
+    .info .descripcion{
+        margin-bottom: 32px;
+    }
+    .text_intro{
+        font-size: 62px;
+    }
+    .video{
+        width: 475px;
+        height: 350px;
+    }
+}
+@media (max-width: 768px) {
+    .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    }
+
+    .nav-links a {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #f1f1f1;
+    }
+
+.nav-links a:last-child {
+    border-bottom: none;
+}
+
+.menu-toggle {
+    display: block;
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+.dropdown-menu {
+    position: relative;
+    box-shadow: none;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: none;
+}
+}
